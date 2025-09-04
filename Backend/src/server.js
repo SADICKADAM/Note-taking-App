@@ -32,7 +32,7 @@ app.use(rateLimiter);
 // Routes
 app.use('/api/notes', notesRoutes);
 
-if(process.env.NODE_ENV === "protuction"){
+if(process.env.NODE_ENV ==="production"){
    app.use(express.static(path.join(__dirname,"../Frontend/dist")));
 
    app.get("*",(req, res)=>{
